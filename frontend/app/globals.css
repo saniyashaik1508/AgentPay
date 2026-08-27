@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+html, body {
+  background-color: #0A0D11;
+  color: #E8ECEF;
+}
+
+* {
+  border-color: #232931;
+}
+
+body {
+  font-feature-settings: 'ss01' 1, 'tnum' 1;
+}
+
+::selection {
+  background: #1E2A44;
+  color: #E8ECEF;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #232931;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2E353E;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid #5B8DEF;
+  outline-offset: 2px;
+}
+
+.card {
+  background-color: #12161B;
+  border: 1px solid #232931;
+  border-radius: 14px;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
